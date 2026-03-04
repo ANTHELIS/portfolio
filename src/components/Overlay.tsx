@@ -23,6 +23,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
                 <div className="text-center">
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-4">Mithu Paul.</h1>
                     <p className="text-xl md:text-2xl font-light text-gray-300">Full Stack Developer & Cybersecurity Enthusiast.</p>
+                    <p className="text-lg md:text-xl font-light text-blue-400 mt-3 mix-blend-screen">Computer Science Student at Brainware University.</p>
                 </div>
             </motion.div>
 

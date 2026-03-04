@@ -15,7 +15,7 @@ const TIMELINE_DATA = [
     year: "2024 – 2027",
     title: "Diploma in Computer Science & Engineering",
     org: "Brainware University, Barasat, India",
-    description: "Ranked among the top 2% of the batch with a 9.67 SGPA in the first year. Relevant coursework includes Data Structures and Algorithms, Object-Oriented Programming, and C/C++.",
+    description: "Ranked among the top 2% of the batch with a 9.67 SGPA in the first year of the university's undergraduate programmes. Actively preparing for placement drives in West Bengal while mastering Data Structures, Algorithms, Object-Oriented Programming, and C/C++.",
     type: "education",
   },
   {

@@ -20,7 +20,7 @@ const skills = [
 const certifications = [
   { name: "Cybersecurity Essentials", issuer: "Cisco Networking Academy", date: "Sept 2025" },
   { name: "Cybersecurity Internship", issuer: "Cisco × NIIT Foundation", date: "Oct 2025" },
-  { name: "Introduction to Python", issuer: "Cisco Networking Academy", date: "Nov 2025" },
+  { name: "Introduction to Python", issuer: "Kaggle", date: "Nov 2025" },
 ];
 
 export default function Skills() {
