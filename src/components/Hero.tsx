@@ -6,7 +6,7 @@ import Overlay from "@/components/Overlay";
 export default function Hero() {
   return (
     <div className="relative" id="home">
-      <ScrollyVideo src="/hero-video-seek.mp4">
+      <ScrollyVideo src="/self-seek.webm">
         {(progress: any) => <Overlay scrollYProgress={progress} />}
       </ScrollyVideo>
     </div>
