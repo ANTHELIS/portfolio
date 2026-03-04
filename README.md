@@ -1,16 +1,21 @@
-# Fawaz V - Personal Portfolio
+# Mithu Paul - Full Stack Developer Portfolio
 
-A premium, interactive personal portfolio website built with modern web technologies to showcase my projects, technical skills, and professional journey.
+![Portfolio Preview](/public/og-image.jpg)
+
+A premium, interactive personal portfolio website built with modern web technologies to showcase my projects, technical skills, and professional journey as a Full Stack Developer and Cybersecurity Enthusiast.
+
+**Live Site:** [https://mithupaul.me](https://mithupaul.me)
 
 ## 🚀 Features
 
-- **Immersive Design:** Dark-themed, high-contrast aesthetic with ambient lighting and glassmorphism effects.
-- **Scrolly-telling Experience:** Smooth scroll animations and transition effects guided by user interaction.
+- **Immersive Design:** Dark-themed, high-contrast aesthetic with ambient lighting, glassmorphism effects, and smooth Framer Motion animations.
+- **Scrolly-telling Experience:** Complex scroll animations and transition effects guided by user interaction (GSAP / Framer).
 - **Interactive Projects Grid:** Bento-style grid layout with video previews and detailed modal views for each project.
-- **Dynamic Timeline:** Visual representation of my professional career and educational background.
+- **Dynamic Timeline:** Visual representation of my Computer Science journey at Brainware University, internships, and milestones.
 - **Testimonial Marquee:** Infinite scrolling marquee for client and colleague testimonials.
-- **Responsive Layout:** Fully optimized for desktops, tablets, and mobile devices.
 - **Contact Integration:** Functional contact form integrated with Nodemailer for direct email communication.
+- **Vercel Analytics:** Integrated tracking for page views, audience demographics, and performance metrics.
+- **Advanced SEO Architecture:** Fully optimized with dynamic OpenGraph tags, JSON-LD structured data (Person & AlumniOf), and automated sitemap/robots generation.
 
 ## 🛠️ Tech Stack
 
@@ -19,20 +24,18 @@ A premium, interactive personal portfolio website built with modern web technolo
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **3D Elements:** [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-- **Icons:** Custom SVG & Lucide React
-- **Video:** [FFmpeg](https://ffmpeg.org/) (for optimization) & HTML5 Video
+- **Analytics & Deployment:** [Vercel](https://vercel.com/)
+- **Video Optimization:** [FFmpeg](https://ffmpeg.org/) (for zero-latency seeking)
 
 ## 📂 Project Structure
 
 ```
 ├── src/
-│   ├── app/             # Application routes (Next.js App Router)
+│   ├── app/             # Application routes, Layouts, SEO Metadata
 │   ├── components/      # Reusable UI components (Hero, Projects, Skills, etc.)
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility functions and shared logic
 │   └── styles/          # Global styles and Tailwind configuration
-├── public/              # Static assets (images, videos, fonts)
-├── .env.local           # Environment variables (not committed)
+├── public/              # Static assets (images, videos, fonts, og-image)
+├── .env                 # Environment variables (Emails, URLs)
 └── package.json         # Project dependencies and scripts
 ```
 
@@ -47,22 +50,27 @@ A premium, interactive personal portfolio website built with modern web technolo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/fawazv/personal_porfolio.git
-   cd personal_porfolio
+   git clone https://github.com/ANTHELIS/portfolio.git
+   cd portfolio
    ```
 
 2. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. Set up environment variables:
-   Create a `.env.local` file in the root directory and add the necessary variables for email services (if applicable):
+   Create a `.env` file in the root directory and add your configurations:
    ```env
-   EMAIL_USER=your_email@example.com
+   # Email configuration for the Contact form
+   EMAIL_USER=your_email@gmail.com
    EMAIL_PASS=your_app_password
+
+   # SEO & Metadata Configuration
+   NEXT_PUBLIC_SITE_URL=https://mithupaul.me
+   NEXT_PUBLIC_GITHUB_URL=https://github.com/ANTHELIS
+   NEXT_PUBLIC_LINKEDIN_URL=https://www.linkedin.com/in/mithu-paul/
+   NEXT_PUBLIC_TWITTER_HANDLE=@Mithu_Paul_
    ```
 
 4. Run the development server:
@@ -72,17 +80,16 @@ A premium, interactive personal portfolio website built with modern web technolo
 
 5. Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
-## 📜 Scripts
+## � SEO & Analytics Setup
 
-- `npm run dev`: Starts the development server.
-- `npm run build`: Builds the application for production.
-- `npm start`: Runs the built production application.
-- `npm run lint`: Runs ESLint for code quality checks.
+This project uses Next.js Metadata API for dynamic SEO.
+- To update the OpenGraph image, replace `public/og-image.jpg` with a `1200x630` image.
+- `sitemap.ts` and `robots.ts` automatically generate when building the project based on the `NEXT_PUBLIC_SITE_URL`.
+- Vercel Web Analytics is tracked automatically using the `@vercel/analytics` package injected inside the root `layout.tsx`.
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/fawazv/personal_porfolio/issues).
+## 🤝 Connect With Me
 
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+- **LinkedIn:** [Mithu Paul](https://www.linkedin.com/in/mithu-paul/)
+- **GitHub:** [@ANTHELIS](https://github.com/ANTHELIS)
+- **Portfolio:** [mithupaul.me](https://mithupaul.me)
