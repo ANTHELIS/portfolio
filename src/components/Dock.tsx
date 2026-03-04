@@ -59,7 +59,7 @@ export default function Dock() {
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 flex h-16 items-end gap-4 rounded-2xl border border-white/10 bg-white/5 px-4 pb-3 backdrop-blur-md"
+      className="fixed bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-50 flex h-12 sm:h-16 items-end gap-1.5 sm:gap-4 rounded-2xl border border-white/10 bg-white/5 px-2 sm:px-4 pb-2 sm:pb-3 backdrop-blur-md max-w-[calc(100vw-16px)]"
     >
       {DOCK_ITEMS.map((item) => (
         <DockIcon key={item.id} mouseX={mouseX} item={item} />
@@ -82,7 +82,9 @@ function DockIcon({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const widthSync = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  // On mobile (touch), disable magnification — just use fixed width
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
+  const widthSync = useTransform(distance, [-150, 0, 150], isMobile ? [32, 32, 32] : [40, 80, 40]);
   const width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
   return (
@@ -90,7 +92,7 @@ function DockIcon({
       <motion.div
         ref={ref}
         style={{ width }}
-        className="aspect-square w-10 rounded-full bg-gray-700/50 border border-white/10 flex items-center justify-center hover:bg-gray-600/80 transition-colors group relative"
+        className="aspect-square w-8 sm:w-10 rounded-full bg-gray-700/50 border border-white/10 flex items-center justify-center hover:bg-gray-600/80 transition-colors group relative"
       >
         <item.icon className="w-1/2 h-1/2 text-gray-200 group-hover:text-white" />
 
